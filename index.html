@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex Morgan | Frontend Developer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo"><span class="hero-logo">&lt;/&gt;</span>Alex <span class="hero-last-name">Morgan</span>
+            </div>
+            <button class="hamburger-menu" id="menuBtn" aria-label="Open menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <div class="text">
+                <h3>Hello, I am </h3>
+                <h1>Alex Morgan</h1>
+                <h2>Front-End Developer</h2>
+                <p>I build modern, responsive and user-friendly web applications that makes a difference.</p>
+                <button class="btn-view"><a href="#projects">View Projects</a></button>
+                <button class="btn-contact"><a href="#contact">Contact Me</a></button>
+            </div>
+            <div class="hero-image">
+                <img src="assets/hero.png" alt="turning ideas in to web experiences">
+            </div>
+        </section>
+
+        <section class="big-box" id="about">
+            <div class="box">
+                <p>About Me</p>
+                <h2>A little bit about me</h2>
+                <p>
+                    I'm a passionate frontend developer who loves creating clean,
+                    accessible, and responsive web experiences. I enjoy learning
+                    new technologies and turning ideas into real products.
+                </p>
+                <a href="#" class="cv-button">Download CV</a>
+            </div>
+            <!-- Right Side -->
+            <div class="about-info">
+                <div class="info-card">
+                    <div class="info-icon">&#9201;</div>
+                    <div>
+                        <h3>Experience</h3>
+                        <p>2+ years</p>
+                    </div>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon">&#9906;</div>
+                    <div>
+                        <h3>Location</h3>
+                        <p>Addis Ababa, Ethiopia</p>
+                    </div>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon">&#9881;</div>
+                    <div>
+                        <h3>Specialization</h3>
+                        <p>Frontend Development</p>
+                    </div>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon">&#127891;</div>
+                    <div>
+                        <h3>Education</h3>
+                        <p>BSc in Computer Science</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="my-skills" id="skills">
+            <h2>My skills</h2>
+            <p>Technologies and tools I work with</p>
+            <div class="tech-grid-card">
+                <div class="skills-card">
+                    <div class="img-wrapper"><img src="assets/html-5.png" alt=""></div>
+                    <p class="skills-lang">html</p>
+                    <p class="skills-percentage">90%</p>
+                    <div class="progress-bar">
+                        <div class="actual-progress"></div>
+                    </div>
+                </div>
+                <div class="skills-card">
+                    <div class="img-wrapper"><img src="assets/css-3.png" alt=""></div>
+                    <p class="skills-lang">css</p>
+                    <p class="skills-percentage">85%</p>
+                    <div class="progress-bar">
+                        <div class="actual-progress" data-level="85"></div>
+                    </div>
+                </div>
+                <div class="skills-card">
+                    <div class="img-wrapper"><img src="assets/js.png" alt=""></div>
+                    <p class="skills-lang">javascript</p>
+                    <p class="skills-percentage">80%</p>
+                    <div class="progress-bar">
+                        <div class="actual-progress" data-level="80"></div>
+                    </div>
+                </div>
+                <div class="skills-card">
+                    <div class="img-wrapper"><img src="assets/physics.png" alt=""></div>
+                    <p class="skills-lang">react</p>
+                    <p class="skills-percentage">75%</p>
+                    <div class="progress-bar">
+                        <div class="actual-progress" data-level="75"></div>
+                    </div>
+                </div>
+                <div class="skills-card">
+                    <div class="img-wrapper"><img src="assets/git.png" alt=""></div>
+                    <p class="skills-lang">git</p>
+                    <p class="skills-percentage">70%</p>
+                    <div class="progress-bar">
+                        <div class="actual-progress" data-level="70"></div>
+                    </div>
+                </div>
+                <div class="skills-card">
+                    <div class="img-wrapper"><img src="assets/tablet.png" alt=""></div>
+                    <p class="skills-lang">responsive design</p>
+                    <p class="skills-percentage">85%</p>
+                    <div class="progress-bar">
+                        <div class="actual-progress" data-level="85"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- NEW: Projects section (loaded from API) -->
+        <!-- <section class="projects" id="projects">
+            <h2>My Projects</h2>
+            <p>Explore some of my recent work. Use the filters to sort projects by category.</p>
+
+            <div class="filters" id="filters">
+                <button class="filter-btn active" data-filter="All">All</button>
+                <button class="filter-btn" data-filter="JavaScript">JavaScript</button>
+                <button class="filter-btn" data-filter="HTML/CSS">HTML/CSS</button>
+                <button class="filter-btn" data-filter="Other">Other</button>
+            </div>
+
+            <div class="status-box hidden" id="loadingBox">
+                <div class="spinner"></div>
+                <p>Loading projects...</p>
+            </div>
+
+            <div class="status-box hidden" id="errorBox">
+                <p class="error-title">Unable to load projects.</p>
+                <p id="errorText">Please try again.</p>
+                <button class="btn-view retry-btn" id="retryBtn">Retry</button>
+            </div>
+
+            <p class="empty-msg hidden" id="emptyMsg">No projects match this category yet.</p>
+
+            <div class="projects-grid" id="projectsGrid"></div>
+
+            <div class="load-more-wrap">
+                <button class="load-more hidden" id="loadMoreBtn">Load More</button>
+            </div>
+        </section> -->
+
+        <section class="projects" id="projects">
+            <!-- <div class="project-card">
+                <img src="assets/git.png" alt="">
+                <p class="title">hoho</p>
+                <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, rem nulla odit totam quam
+                    inventore voluptate porro. Quaerat eveniet, laborum incidunt vero perferendis repudiandae placeat
+                    enim quasi quidem. Aliquam, harum!</p>
+                <button>View Details</button>
+
+
+            </div> -->
+            <!-- <div class="project-card">
+                <img src="assets/git.png" alt="">
+                <p class="title">hoho</p>
+                <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, rem nulla odit totam quam
+                    inventore voluptate porro. Quaerat eveniet, laborum incidunt vero perferendis repudiandae placeat
+                    enim quasi quidem. Aliquam, harum!</p>
+                <button>View Details</button>
+
+
+            </div>
+            <div class="project-card">
+                <img src="assets/git.png" alt="">
+                <p class="title">hoho</p>
+                <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, rem nulla odit totam quam
+                    inventore voluptate porro. Quaerat eveniet, laborum incidunt vero perferendis repudiandae placeat
+                    enim quasi quidem. Aliquam, harum!</p>
+                <button>View Details</button>
+
+
+            </div>
+            <div class="project-card">
+                <img src="assets/git.png" alt="">
+                <p class="title">hoho</p>
+                <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, rem nulla odit totam quam
+                    inventore voluptate porro. Quaerat eveniet, laborum incidunt vero perferendis repudiandae placeat
+                    enim quasi quidem. Aliquam, harum!</p>
+                <button>View Details</button>
+
+
+            </div> -->
+        </section>
+
+        <section class="contact" id="contact">
+            <h2>Get in Touch</h2>
+            <p>Have a project in mind or just want to say hello? I'd love to hear from you.</p>
+            <div class="contact-container">
+                <form id="contactForm" novalidate>
+                    <label for="name">Name</label>
+                    <input id="name" name="name" type="text" placeholder="Your name">
+                    <p class="field-error" id="nameError"></p>
+
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="email" placeholder="your@gmail.com">
+                    <p class="field-error" id="emailError"></p>
+
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Your message..."></textarea>
+                    <p class="field-error" id="messageError"></p>
+
+                    <button type="submit">Send message</button>
+                    <p class="form-message" id="formMessage" aria-live="polite"></p>
+                </form>
+                <div class="contact-address">
+                    <div class="contact-address-card">
+                        <div class="contact-img-container">
+                            <img src="assets/mail.png" alt="">
+                        </div>
+                        <div class="conatct-email">
+                            <h3>Email</h3>
+                            <p>me@gmail.com</p>
+                        </div>
+                    </div>
+                    <h3>Phone</h3>
+                    <p>+251 999 999999</p>
+                    <h3>Location</h3>
+                    <p>Addis Ababa, Ethiopia</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <footer class="footer">
+        <p>&copy; <span id="year"></span> Alex Morgan. All rights reserved.</p>
+    </footer>
+
+    <!-- <button class="open-btn" id="openModal"> Open Modal </button> -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal" role="dialog" aria-modal="true">
+
+            <div class="modal-body">
+                <p>Nothing here. </p>
+            </div>
+            <div class="modal-footer"><button class="btn close-btn"> ok </button> </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
